@@ -37,10 +37,10 @@ module.exports = () => ({
     require('postcss-calc')(),
     // Allows you to nest one style rule inside another
     // https://github.com/jonathantneal/postcss-nesting
-    require('postcss-nesting')(),
+    //require('postcss-nesting')(),
     // Unwraps nested rules like how Sass does it
     // https://github.com/postcss/postcss-nested
-    require('postcss-nested')(),
+    //require('postcss-nested')(),
     // W3C color() function, e.g. div { background: color(red alpha(90%)); }
     // https://github.com/postcss/postcss-color-function
     require('postcss-color-function')(),
@@ -61,6 +61,10 @@ module.exports = () => ({
     require('postcss-flexbugs-fixes')(),
     // Add vendor prefixes to CSS rules using values from caniuse.com
     // https://github.com/postcss/autoprefixer
-    require('autoprefixer')(/* package.json/browserslist */),
+    //require('autoprefixer')(/* package.json/browserslist */),
+
+    /* eslint-disable global-require */
+    require('postcss-cssnext'),
+    /* eslint-enable global-require */
   ],
 });
